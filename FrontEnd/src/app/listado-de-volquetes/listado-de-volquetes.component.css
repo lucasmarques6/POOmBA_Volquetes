@@ -1,0 +1,23 @@
+.container {
+    margin-top: 30px;
+}
+
+.btn-editar {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+button {
+    border-radius: 5px;
+}
+
+.flex {
+    display: flex;
+    justify-content:end;
+}
+
+.tabla {
+    margin-top: 30px;
+}
+
+
