@@ -1,5 +1,22 @@
 const Volquete = require("../models/Volquete")
 
+/*
+* Se obtienen todos los Servicios de Volquetes
+*/
+exports.obtenerServicios = async(req, res) => {
+   try {
+       let volquetes = await Volquete.find();
+       res.status(200).send(volquetes);
+   } catch (error) {
+       console.log(error);
+       res.status(500).send("Hubo un error al intentar recuperar las solicitudes...");
+   }
+}
+
+/*
+* Crea solicidu de volquete por medio de un método post,
+* Recibiendo la info por el cuerpo de la request
+*/
 exports.crearSolicitudVolquete = async(req,res) => {
     try {
        let volquetes;
@@ -12,6 +29,10 @@ exports.crearSolicitudVolquete = async(req,res) => {
     }
  }
 
+ /*
+* Elimina la solicidu de volquete,
+* Recibe como parametro de entrada el id de la solicitud a eliminar.
+*/
  exports.eliminarSolicitudVolquete = async(req, res) => {
    try {
        let solicitudesVolquetes = await Volquete.findById(req.params.id);

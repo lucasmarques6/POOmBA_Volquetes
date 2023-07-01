@@ -1,14 +1,18 @@
+### //Test método obtenerServicios
+GET http://localhost:3000/api/volquetes
+
+### //Test método crearSolicitudVolquete
 POST http://localhost:3000/api/volquetes
 Content-Type: application/json
 
 {
-    "numero": 123,
-    "cliente": "Pedro",
-    "precio": 2223,
-    "cantidad":1,
+    "numero": 12332,
+    "cliente": "Pedros",
+    "precio": 22232,
+    "cantidad":3,
     "tamaño":"grande",
-    "chofer":"Monica",
-    "ubicacion": "San Juan 2333"
+    "chofer":"Lucas",
+    "ubicacion": "Av Siempre Viva 1234"
 }
 
 ### //Test método eliminar
