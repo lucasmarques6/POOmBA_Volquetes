@@ -1,0 +1,26 @@
+{
+  "name": "servidor",
+  "version": "1.0.0",
+  "description": "Servicio de alquiler de volquetes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasmarques6/POOmBA_Volquetes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasmarques6/POOmBA_Volquetes/issues"
+  },
+  "homepage": "https://github.com/lucasmarques6/POOmBA_Volquetes#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.1",
+    "nodemon": "^2.0.22"
+  }
+}
