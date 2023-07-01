@@ -10,3 +10,7 @@ Content-Type: application/json
     "chofer":"Monica",
     "ubicacion": "San Juan 2333"
 }
+
+### //Test método eliminar
+
+DELETE http://localhost:3000/api/volquetes/649fcaba0199c22fb92dd953
