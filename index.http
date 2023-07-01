@@ -1,0 +1,12 @@
+POST http://localhost:3000/api/volquetes
+Content-Type: application/json
+
+{
+    "numero": 123,
+    "cliente": "Pedro",
+    "precio": 2223,
+    "cantidad":1,
+    "tamaño":"grande",
+    "chofer":"Monica",
+    "ubicacion": "San Juan 2333"
+}
