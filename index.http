@@ -1,6 +1,10 @@
 ### //Test método obtenerServicios
 GET http://localhost:3000/api/volquetes
 
+
+### //Test método obtenerServicio
+GET http://localhost:3000/api/volquetes/649fd21745481facccfb1d9d
+
 ### //Test método crearSolicitudVolquete
 POST http://localhost:3000/api/volquetes
 Content-Type: application/json

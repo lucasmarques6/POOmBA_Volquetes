@@ -46,3 +46,20 @@ exports.crearSolicitudVolquete = async(req,res) => {
        res.status(500).send("Hubo un error al intentar elimiar la solicitud - E0005");
    }
 }
+
+//---------------OBTENER SERVICIO---------
+exports.obtenerServicio = async(req, res) => {
+    try {
+        let volquete;
+        volquete = await Volquete.findById(req.params.id);//por ahora accedo al id que estoy pasando por url
+        if(!volquete){
+            res.status(404).json("No existe el producto");
+        }
+        res.json(volquete);
+
+    } catch (error) {
+        console.log(error);//error por consola
+        res.status(500).send('Hubo un error...');//error para el cliente
+    }
+}
+
