@@ -29,4 +29,16 @@ export class ListadoDeVolquetesComponent implements OnInit {
     })
   }
 
+  eliminarServicioVolquete(id:any){
+    this._volqueteService.deleteVolquete(id).subscribe({
+      next: data => {
+        this.obtenerVolquetes()
+        console.log(data);
+        //this.listVolquetes = data;
+      }, error: err => {
+        console.log(err);
+      }
+    })
+  }
+
 }
