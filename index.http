@@ -6,13 +6,13 @@ POST http://localhost:3000/api/volquetes
 Content-Type: application/json
 
 {
-    "numero": 12332,
-    "cliente": "Pedros",
-    "precio": 22232,
-    "cantidad":3,
-    "tamaño":"grande",
-    "chofer":"Lucas",
-    "ubicacion": "Av Siempre Viva 1234"
+    "numero": 12349,
+    "cliente": "Salvador",
+    "precio": 99232,
+    "cantidad":2,
+    "tamanio":"grande",
+    "chofer":"Matías",
+    "ubicacion": "Cuenca 2851"
 }
 
 ### //Test método eliminar

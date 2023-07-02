@@ -4,7 +4,7 @@ export class Volquete {
     cliente: string;
     precio: number;
     cantidad: number;
-    tamaño: string;
+    tamanio: string;
     chofer: string;
     ubicacion: string;
 
@@ -13,7 +13,7 @@ export class Volquete {
         this.cliente = cliente;
         this.precio = precio;
         this.cantidad = cantidad;
-        this.tamaño = tamaño;
+        this.tamanio = tamaño;
         this.chofer = chofer;
         this.ubicacion = ubicacion;
     }

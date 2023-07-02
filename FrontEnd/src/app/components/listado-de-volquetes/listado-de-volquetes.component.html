@@ -28,14 +28,14 @@
                 <th scope="col"></th>
             </tr>
         </thead>
-        <tbody class="table-active">
+        <tbody *ngFor="let volquete of listVolquetes" class="table-active">
             <tr>
-                <th scope="row">volquete.numero</th>
-                <td>volquete.cliente</td>
-                <td>volquete.cantidad</td>
-                <td>volquete.tamaño</td>
-                <td>volquete.chofer</td>
-                <td>volquete.ubicacion</td>
+                <th scope="row">{{volquete.numero}}</th>
+                <td>{{volquete.cliente}}</td>
+                <td>{{volquete.cantidad}}</td>
+                <td>{{volquete.tamanio}}</td>
+                <td>{{volquete.chofer}}</td>
+                <td>{{volquete.ubicacion}}</td>
                 <td>
                     <button type="button" class="btn btn-primary">Detalle</button>
                     <button type="button" class="btn btn-success btn-editar">Editar</button>

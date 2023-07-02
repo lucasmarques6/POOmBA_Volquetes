@@ -18,7 +18,7 @@ const volqueteSchema = mongoose.Schema(
             type: Number,
             required: true
         },
-        tamaño: {
+        tamanio: {
             type: String,
             required: true
         },

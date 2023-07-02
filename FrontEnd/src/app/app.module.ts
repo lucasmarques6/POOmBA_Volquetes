@@ -9,6 +9,7 @@ import { AgregarServicioComponent } from './components/agregar-servicio/agregar-
 import { ListadoDeVolquetesComponent } from './components/listado-de-volquetes/listado-de-volquetes.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DetalleServicioComponent } from './components/detalle-servicio/detalle-servicio.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DetalleServicioComponent } from './components/detalle-servicio/detalle-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
