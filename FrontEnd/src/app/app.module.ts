@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { NosotrosComponent } from './nosotros/nosotros.component';
-import { AgregarServicioComponent } from './agregar-servicio/agregar-servicio.component';
-import { ListadoDeVolquetesComponent } from './listado-de-volquetes/listado-de-volquetes.component';
-import { FooterComponent } from './footer/footer.component';
-import { DetalleServicioComponent } from './detalle-servicio/detalle-servicio.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
+import { AgregarServicioComponent } from './components/agregar-servicio/agregar-servicio.component';
+import { ListadoDeVolquetesComponent } from './components/listado-de-volquetes/listado-de-volquetes.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { DetalleServicioComponent } from './components/detalle-servicio/detalle-servicio.component';
 
 @NgModule({
   declarations: [

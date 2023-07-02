@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AgregarServicioComponent } from './agregar-servicio/agregar-servicio.component';
-import { DetalleServicioComponent } from './detalle-servicio/detalle-servicio.component';
+import { AgregarServicioComponent } from './components/agregar-servicio/agregar-servicio.component';
+import { DetalleServicioComponent } from './components/detalle-servicio/detalle-servicio.component';
 //import { FooterComponent } from './footer/footer.component';
-import { ListadoDeVolquetesComponent } from './listado-de-volquetes/listado-de-volquetes.component';
+import { ListadoDeVolquetesComponent } from './components/listado-de-volquetes/listado-de-volquetes.component';
 //import { NavbarComponent } from './navbar/navbar.component';
-import { NosotrosComponent } from './nosotros/nosotros.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
 
 const routes: Routes = [
   { path: "", component: ListadoDeVolquetesComponent},
