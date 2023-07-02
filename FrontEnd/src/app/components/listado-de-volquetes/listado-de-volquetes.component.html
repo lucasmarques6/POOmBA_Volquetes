@@ -37,7 +37,7 @@
                 <td>{{volquete.chofer}}</td>
                 <td>{{volquete.ubicacion}}</td>
                 <td>
-                    <button type="button" class="btn btn-primary">Detalle</button>
+                    <button (click)="obtenerVolquete(volquete._id)" routerLink="/detalle" type="button" class="btn btn-primary">Detalle</button>              
                     <button type="button" class="btn btn-success btn-editar">Editar</button>
                     <button type="button" class="btn btn-danger">Eliminar</button>
                 </td>

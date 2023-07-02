@@ -22,11 +22,24 @@ export class ListadoDeVolquetesComponent implements OnInit {
       next: data =>{
         console.log(data);
         this.listVolquetes = data;
-      },
+      }, 
       error: err => {
         console.log(err);
       }
     })
+  }
+
+  obtenerVolquete(id:any) {
+    this._volqueteService.getVolquete(id).subscribe({
+      next: data =>{
+        console.log(data);
+        this.listVolquetes = data;
+      }, 
+      error: err =>{
+        console.log(err);
+      }
+    })
+
   }
 
 }
