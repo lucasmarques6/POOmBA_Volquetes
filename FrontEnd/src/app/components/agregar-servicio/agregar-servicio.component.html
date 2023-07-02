@@ -1,56 +1,60 @@
 
 <div class="formBox">
-<div class="formulario">
-
-<h2>Ingresar Servicio</h2>
-<form>
-    <fieldset>
-        <div class="form-group">
-            <label for="exampleSelect1" class="form-label">Número</label>
-            <select class="form-select" id="exampleSelect1">
-                <option>Seleccione Volquete</option>
-              <option>1</option>
-              <option>2</option>
-            </select>
-          </div>
-      <div class="form-group">
-        <label for="cliente" class="form-label">Cliente</label>
-        <input type="text" class="form-control" id="cliente" placeholder="Ingrese Cliente">
-      </div>
-      <div class="form-group">
-        <label for="cantidadVolquete" class="form-label">Cantidad</label>
-        <select class="form-select" id="cantidadVolquete">
-            <option>Seleccione cantidad</option>
-          <option>1</option>
-          <option>2</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="tamanioVolquete" class="form-label">Tamaño</label>
-        <select class="form-select" id="tamanioVolquete">
-            <option>Seleccione tamaño</option>
-          <option>Pequeño</option>
-          <option>Si probó el chiquito, ahora probá el grandote!!! doble y triple capacidad</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="choferVolquete" class="form-label">Chofer</label>
-        <select class="form-select" id="choferVolquete">
-            <option>Seleccione chofer</option>
-          <option>Moni</option>
-          <option>Lucas</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="ubicacionVolquete" class="form-label">Dirección</label>
-        <input type="text" class="form-control" id="ubicacionVolquete" placeholder="Ingrese Dirección">
-      </div>
-      <div class="btnForms">
-        <button type="submit" class="btn btn-primary">Ingresar Servicio</button>
-        <button type="button" class="btn btn-danger">Cancelar</button>
-      </div>
-    </fieldset>
-  </form>
+  <div class="formulario">
   
-</div>
-</div>
+  <h2>Ingresar Servicio</h2>
+  <form [formGroup]="volqueteForm" (ngSubmit)="agregarServicio()">
+      <fieldset>
+          <div class="form-group">
+              <label for="exampleSelect1" class="form-label">Número</label>
+              <select formControlName="numero" class="form-select" id="exampleSelect1">
+                  <option>Seleccione Volquete</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </div>
+        <div class="form-group">
+          <label for="cliente" class="form-label">Cliente</label>
+          <input formControlName="cliente" type="text" class="form-control" id="cliente" placeholder="Ingrese Cliente">
+        </div>
+        <div class="form-group">
+          <label for="precioVolquete" class="form-label">Precio</label>
+          <input formControlName="precio" type="text" class="form-control" id="precioVolquete" placeholder="60500">
+        </div>
+        <div class="form-group">
+          <label for="cantidadVolquete" class="form-label">Cantidad</label>
+          <select formControlName="cantidad" class="form-select" id="cantidadVolquete">
+              <option>Seleccione cantidad</option>
+            <option>1</option>
+            <option>2</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="tamanioVolquete" class="form-label">Tamaño</label>
+          <select formControlName="tamanio" class="form-select" id="tamanioVolquete">
+              <option>Seleccione tamaño</option>
+            <option>Pequeño</option>
+            <option>Si probó el chiquito, ahora probá el grandote!!! doble y triple capacidad</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="choferVolquete" class="form-label">Chofer</label>
+          <select formControlName="chofer" class="form-select" id="choferVolquete">
+              <option>Seleccione chofer</option>
+            <option>Moni</option>
+            <option>Lucas</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ubicacionVolquete" class="form-label">Dirección</label>
+          <input formControlName="ubicacion" type="text" class="form-control" id="ubicacionVolquete" placeholder="Ingrese Dirección">
+        </div>
+        <div class="btnForms">
+          <button type="submit" class="btn btn-primary">Ingresar Servicio</button>
+          <button routerLink="/" type="button" class="btn btn-danger">Cancelar</button>
+        </div>
+      </fieldset>
+    </form>
+    
+  </div>
+  </div>

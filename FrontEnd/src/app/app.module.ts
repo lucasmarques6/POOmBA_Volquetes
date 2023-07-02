@@ -10,6 +10,7 @@ import { ListadoDeVolquetesComponent } from './components/listado-de-volquetes/l
 import { FooterComponent } from './components/footer/footer.component';
 import { DetalleServicioComponent } from './components/detalle-servicio/detalle-servicio.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

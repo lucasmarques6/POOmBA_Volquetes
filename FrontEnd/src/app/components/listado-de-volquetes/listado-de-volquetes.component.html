@@ -21,6 +21,7 @@
             <tr>
                 <th scope="col">Numero</th>
                 <th scope="col">Cliente</th>
+                <th scope="col">Precio</th>
                 <th scope="col">Cantidad</th>
                 <th scope="col">Tamaño</th>
                 <th scope="col">Chofer</th>
@@ -32,6 +33,7 @@
             <tr>
                 <th scope="row">{{volquete.numero}}</th>
                 <td>{{volquete.cliente}}</td>
+                <td>{{volquete.precio}}</td>
                 <td>{{volquete.cantidad}}</td>
                 <td>{{volquete.tamanio}}</td>
                 <td>{{volquete.chofer}}</td>
@@ -39,7 +41,7 @@
                 <td>
                     <button (click)="obtenerVolquete(volquete._id)" routerLink="/detalle" type="button" class="btn btn-primary">Detalle</button>              
                     <button type="button" class="btn btn-success btn-editar">Editar</button>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <button (click)="eliminarServicioVolquete(volquete._id)" type="button" class="btn btn-danger">Eliminar</button>
                 </td>
             </tr>
         </tbody>
