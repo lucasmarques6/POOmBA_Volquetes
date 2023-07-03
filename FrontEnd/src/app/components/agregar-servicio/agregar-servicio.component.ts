@@ -10,7 +10,6 @@ import { VolqueteService } from 'src/app/services/volquete.service'
   styleUrls: ['./agregar-servicio.component.css']
 })
 export class AgregarServicioComponent {
-  //private _volqueteService: VolqueteService;
 
   volqueteForm: FormGroup;
 

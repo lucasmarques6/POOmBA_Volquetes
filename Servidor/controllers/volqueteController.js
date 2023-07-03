@@ -50,10 +50,11 @@ exports.crearSolicitudVolquete = async(req,res) => {
 //---------------OBTENER SERVICIO---------
 exports.obtenerServicio = async(req, res) => {
     try {
+        console.log("entrando a obtener un servicio")
         let volquete;
         volquete = await Volquete.findById(req.params.id);//por ahora accedo al id que estoy pasando por url
         if(!volquete){
-            res.status(404).json("No existe el producto");
+            res.status(404).json("No existe la solicitud de servicio volquete");
         }
         res.json(volquete);
 
@@ -62,4 +63,32 @@ exports.obtenerServicio = async(req, res) => {
         res.status(500).send('Hubo un error...');//error para el cliente
     }
 }
+
+ /*
+* Actualiza la solicidu de volquete,
+* Recibe como parametro de entrada el id de la solicitud que se desea actualizar.
+*/
+exports.actualizarVolquete = async(req, res) => {
+    try {
+        const {numero,cliente,precio,cantidad,tamanio,chofer,ubicacion} = req.body;
+        let solicitudVolquete = await Volquete.findById(req.params.id);
+        if(!solicitudVolquete){
+            res.json("No existe la solicitud que desea actualizar");
+        }
+        solicitudVolquete.numero = numero;
+        solicitudVolquete.cliente = cliente;
+        solicitudVolquete.precio = precio;
+        solicitudVolquete.cantidad = cantidad;
+        solicitudVolquete.tamanio = tamanio;
+        solicitudVolquete.chofer = chofer;
+        solicitudVolquete.ubicacion = ubicacion;
+
+        solicitudVolquete = await Volquete.findOneAndUpdate({_id:req.params.id}, solicitudVolquete, {new: true});
+        res.json(solicitudVolquete);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send("Hubo un error al actualizar la solicitud del volquete...");
+    }
+}
+
 

@@ -16,6 +16,7 @@ export class VolqueteService {
   }
 
   getVolquete(id:string): Observable<any>{
+    console.log("ingreso a getVolquete");
     return this.http.get(this.url + id);
   }
 
@@ -26,4 +27,8 @@ export class VolqueteService {
   deleteVolquete(id:string): Observable<any>{
     return this.http.delete(this.url + id);
   }
+
+  putVolquete(id: string, volquete:Volquete):Observable <any> {
+    return this.http.put (this.url + id, volquete);
+    }
 }

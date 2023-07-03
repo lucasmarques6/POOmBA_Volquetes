@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DetalleServicioComponent } from './components/detalle-servicio/detalle-servicio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditarServicioComponent } from './components/editar-servicio/editar-servicio.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AgregarServicioComponent,
     ListadoDeVolquetesComponent,
     FooterComponent,
-    DetalleServicioComponent
+    DetalleServicioComponent,
+    EditarServicioComponent
   ],
   imports: [
     BrowserModule,

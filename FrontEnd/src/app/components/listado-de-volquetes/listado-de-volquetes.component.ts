@@ -45,7 +45,7 @@ export class ListadoDeVolquetesComponent implements OnInit {
     this._volqueteService.getVolquete(id).subscribe({
       next: data =>{
         console.log(data);
-        this.listVolquetes = data;
+        //this.listVolquetes = data;
       }, 
       error: err =>{
         console.log(err);
