@@ -1,18 +1,24 @@
-
 <div class="formBox">
   <div class="formulario">
-  
-  <h2>Ingresar Servicio</h2>
-  <form [formGroup]="volqueteForm" (ngSubmit)="agregarServicio()">
+
+    <h2>Ingresar Servicio</h2>
+    <form [formGroup]="volqueteForm" (ngSubmit)="agregarServicio()">
       <fieldset>
-          <div class="form-group">
-              <label for="exampleSelect1" class="form-label">Número</label>
-              <select formControlName="numero" class="form-select" id="exampleSelect1">
-                  <option>Seleccione Volquete</option>
-                <option>1</option>
-                <option>2</option>
-              </select>
-            </div>
+        <div class="form-group">
+          <label for="exampleSelect1" class="form-label">Número</label>
+          <select formControlName="numero" class="form-select" id="exampleSelect1">
+            <option>1005</option>
+            <option>1006</option>
+            <option>1007</option>
+            <option>1008</option>
+            <option>1009</option>
+            <option>1010</option>
+            <option>1011</option>
+            <option>1012</option>
+            <option>1013</option>
+            <option>1014</option>
+          </select>
+        </div>
         <div class="form-group">
           <label for="cliente" class="form-label">Cliente</label>
           <input formControlName="cliente" type="text" class="form-control" id="cliente" placeholder="Ingrese Cliente">
@@ -24,30 +30,34 @@
         <div class="form-group">
           <label for="cantidadVolquete" class="form-label">Cantidad</label>
           <select formControlName="cantidad" class="form-select" id="cantidadVolquete">
-              <option>Seleccione cantidad</option>
             <option>1</option>
             <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
           </select>
         </div>
         <div class="form-group">
           <label for="tamanioVolquete" class="form-label">Tamaño</label>
           <select formControlName="tamanio" class="form-select" id="tamanioVolquete">
-              <option>Seleccione tamaño</option>
             <option>Pequeño</option>
-            <option>Si probó el chiquito, ahora probá el grandote!!! doble y triple capacidad</option>
+            <option>Mediano</option>
+            <option>Grande</option>
           </select>
         </div>
         <div class="form-group">
           <label for="choferVolquete" class="form-label">Chofer</label>
           <select formControlName="chofer" class="form-select" id="choferVolquete">
-              <option>Seleccione chofer</option>
-            <option>Moni</option>
+            <option>Mónica</option>
             <option>Lucas</option>
+            <option>Gustavo</option>
+            <option>Federico</option>
           </select>
         </div>
         <div class="form-group">
           <label for="ubicacionVolquete" class="form-label">Dirección</label>
-          <input formControlName="ubicacion" type="text" class="form-control" id="ubicacionVolquete" placeholder="Ingrese Dirección">
+          <input formControlName="ubicacion" type="text" class="form-control" id="ubicacionVolquete"
+            placeholder="Ingrese Dirección">
         </div>
         <div class="btnForms">
           <button type="submit" class="btn btn-primary">Ingresar Servicio</button>
@@ -55,6 +65,6 @@
         </div>
       </fieldset>
     </form>
-    
+
   </div>
-  </div>
+</div>

@@ -16,6 +16,12 @@ button {
     padding-right: 30px;
 }
 
+.formBox {
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+
 label {
     margin-top: 10px;
 }

@@ -1,7 +1,15 @@
 <div class="container">
     <h1>Volquetes POOmBA</h1>
 
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ullam, itaque, officiis rem cupiditate et nobis id optio hic in numquam soluta distinctio eaque. Tempora suscipit et modi perspiciatis illum, laboriosam eius voluptatem itaque, totam sed impedit, quas quis necessitatibus! Quisquam, corrupti! Rerum quasi suscipit odio tempore magni mollitia accusantium natus ducimus cumque dolore, atque, animi dignissimos molestias totam sed minus optio recusandae voluptates, neque blanditiis quam corporis asperiores accusamus. Ea aliquam accusamus temporibus eligendi aut qui eveniet earum, natus provident deleniti est. Quidem aut voluptatem est asperiores culpa autem iure ullam ea eos consequatur officiis beatae, voluptates quod fuga porro molestias cupiditate quae quisquam deleniti id quas, iusto aliquid? Tempora in natus corporis debitis quasi molestiae veniam laudantium saepe totam eius! Cupiditate beatae voluptatum non dolores quaerat, sunt delectus quae pariatur. Voluptatibus qui expedita, veniam accusamus suscipit delectus asperiores!</p>
+    <p> Somos el grupo POOmBA, integrado por: Mónica Nieto, Lucas Marques de Paiva, Federico Balbuena y Gustavo
+        Zammataro.</p>
+    <p> Como proyecto final integral de las materias Frontend y Backend, realizamos un ABM o CRUD (por sus siglas en
+        ingles), para un sistema de gestión de volquetes, el objetivo es poder crear órdenes de servicio, poder
+        editarlas, revisarlas o eliminarlas según corresponda. Para realizar este proyecto utilizamos: FrontEnd: HTML,
+        CSS, JavaScript, Angular, Bootswatch. BackEnd: TypeScript, Node, Express, MongoDB. Para gestión del proyecto,
+        utilizamos un sistema de versionado con git y subimos el proyecto a un repositorio en GitHub, donde trabajamos
+        en forma colaborativa dividiendo tareas y validando criterios entre los miembros del equipo. Para la gestión de
+        las tareas empleamos Trello, donde fuimos registrando el progreso y el estado de las tareas.</p>
 
     <div class="flex">
         <button class="btn btn-lg btn-primary btn-agregar" type="button" routerLink="/agregar">Agregar Servicio</button>
@@ -30,9 +38,12 @@
                 <td>{{volquete.chofer}}</td>
                 <td>{{volquete.ubicacion}}</td>
                 <td>
-                    <button [routerLink]="['/detalle', volquete._id]" type="button" class="btn btn-primary">Detalle</button>              
-                    <button [routerLink]="['/editar', volquete._id]" type="button" class="btn btn-success btn-editar">Editar</button>
-                    <button (click)="eliminarServicioVolquete(volquete._id)" type="button" class="btn btn-danger">Eliminar</button>
+                    <button [routerLink]="['/detalle', volquete._id]" type="button"
+                        class="btn btn-primary">Detalle</button>
+                    <button [routerLink]="['/editar', volquete._id]" type="button"
+                        class="btn btn-success btn-editar">Editar</button>
+                    <button (click)="eliminarServicioVolquete(volquete._id)" type="button"
+                        class="btn btn-danger">Eliminar</button>
                 </td>
             </tr>
         </tbody>
