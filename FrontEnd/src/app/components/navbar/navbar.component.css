@@ -1,3 +1,15 @@
 button {
     border-radius: 5px;
 }
+
+span a{
+    margin-left: 6px;
+}
+
+a img{
+    height: 15%;
+    width: 15%;
+}
+#navbar{
+    display: block;
+}
