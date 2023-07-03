@@ -17,7 +17,9 @@ export class VolqueteService {
 
   getVolquete(id:string): Observable<any>{
     console.log("ingreso a getVolquete");
-    return this.http.get(this.url + id);
+    let resultGet = this.http.get(this.url + id);
+    console.log(resultGet);
+    return resultGet;
   }
 
   postVolquete(volquete: Volquete): Observable<any>{

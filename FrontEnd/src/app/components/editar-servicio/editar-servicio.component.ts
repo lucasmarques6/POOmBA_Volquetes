@@ -9,7 +9,7 @@ import { VolqueteService } from 'src/app/services/volquete.service';
   templateUrl: './editar-servicio.component.html',
   styleUrls: ['./editar-servicio.component.css']
 })
-export class EditarServicioComponent  implements OnInit {
+export class EditarServicioComponent implements OnInit {
   
   volqueteForm: FormGroup;
   id: string | null;

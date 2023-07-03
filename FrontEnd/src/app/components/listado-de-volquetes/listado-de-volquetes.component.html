@@ -39,7 +39,7 @@
                 <td>{{volquete.chofer}}</td>
                 <td>{{volquete.ubicacion}}</td>
                 <td>
-                    <button (click)="obtenerVolquete(volquete._id)" routerLink="/detalle" type="button" class="btn btn-primary">Detalle</button>              
+                    <button [routerLink]="['/detalle', volquete._id]" type="button" class="btn btn-primary">Detalle</button>              
                     <button [routerLink]="['/editar', volquete._id]" type="button" class="btn btn-success btn-editar">Editar</button>
                     <button (click)="eliminarServicioVolquete(volquete._id)" type="button" class="btn btn-danger">Eliminar</button>
                 </td>
