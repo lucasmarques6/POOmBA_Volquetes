@@ -13,6 +13,7 @@ export class DetalleServicioComponent implements OnInit {
   
   volqueteForm: FormGroup;
   id: string | null;
+  direccion: string;
 
   constructor(
     private fb: FormBuilder,
@@ -20,9 +21,10 @@ export class DetalleServicioComponent implements OnInit {
     private _volqueteService: VolqueteService,
     private actRouter: ActivatedRoute
   ) {
+    this.direccion = ""
     this.volqueteForm = this.fb.group({
-      numero: [''],
-      cliente: [''],
+      numero: ['', Validators.required],
+      cliente: ['', Validators.required],
       precio: ['', Validators.required],
       cantidad: ['', Validators.required],
       tamanio: ['', Validators.required],
@@ -52,11 +54,20 @@ export class DetalleServicioComponent implements OnInit {
             chofer: data.chofer,
             ubicacion: data.ubicacion
           })
+          this.direccion = "https://maps.google.com/maps?q="+ this.splitText(data.ubicacion) +"+caba&t=&z=13&ie=UTF8&iwloc=&output=embed";
+          console.log(this.direccion)
+        this.splitText(this.direccion)
         }, error: err => {
           console.log(err);
         }
       })
     }
+  }
+
+  splitText(dir: string) {
+    let splitted = dir.replace(/\s+/g, '+');
+    console.log(splitted);
+    return splitted;
   }
 }
 
