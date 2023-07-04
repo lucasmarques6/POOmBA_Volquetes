@@ -8,8 +8,6 @@ export class UrlSafe implements PipeTransform {
 
   constructor(private sanitizer: DomSanitizer) { }
   transform(url: string) {
-
-    console.log("entra o no entra?")
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 

@@ -14,7 +14,7 @@ exports.obtenerServicios = async(req, res) => {
 }
 
 /*
-* Crea solicidu de volquete por medio de un método post,
+* Crea solicitud de volquete por medio de un método post,
 * Recibiendo la info por el cuerpo de la request
 */
 exports.crearSolicitudVolquete = async(req,res) => {
@@ -64,7 +64,7 @@ exports.obtenerServicio = async(req, res) => {
 }
 
  /*
-* Actualiza la solicidu de volquete,
+* Actualiza la solicitud de volquete,
 * Recibe como parametro de entrada el id de la solicitud que se desea actualizar.
 */
 exports.actualizarVolquete = async(req, res) => {
