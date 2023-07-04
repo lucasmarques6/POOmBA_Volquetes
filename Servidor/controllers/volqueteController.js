@@ -30,7 +30,7 @@ exports.crearSolicitudVolquete = async(req,res) => {
  }
 
  /*
-* Elimina la solicidu de volquete,
+* Elimina la solicitud de volquete,
 * Recibe como parametro de entrada el id de la solicitud a eliminar.
 */
  exports.eliminarSolicitudVolquete = async(req, res) => {
@@ -50,17 +50,16 @@ exports.crearSolicitudVolquete = async(req,res) => {
 //---------------OBTENER SERVICIO---------
 exports.obtenerServicio = async(req, res) => {
     try {
-        console.log("entrando a obtener un servicio")
         let volquete;
-        volquete = await Volquete.findById(req.params.id);//por ahora accedo al id que estoy pasando por url
+        volquete = await Volquete.findById(req.params.id);
         if(!volquete){
             res.status(404).json("No existe la solicitud de servicio volquete");
         }
         res.json(volquete);
 
     } catch (error) {
-        console.log(error);//error por consola
-        res.status(500).send('Hubo un error...');//error para el cliente
+        console.log(error);
+        res.status(500).send('Hubo un error...');
     }
 }
 

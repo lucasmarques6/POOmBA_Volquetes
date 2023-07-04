@@ -13,6 +13,7 @@ export class DetalleServicioComponent implements OnInit {
   
   volqueteForm: FormGroup;
   id: string | null;
+  direccion: string;
 
   constructor(
     private fb: FormBuilder,
@@ -20,9 +21,10 @@ export class DetalleServicioComponent implements OnInit {
     private _volqueteService: VolqueteService,
     private actRouter: ActivatedRoute
   ) {
+    this.direccion = ""
     this.volqueteForm = this.fb.group({
-      numero: [''],
-      cliente: [''],
+      numero: ['', Validators.required],
+      cliente: ['', Validators.required],
       precio: ['', Validators.required],
       cantidad: ['', Validators.required],
       tamanio: ['', Validators.required],
@@ -52,11 +54,20 @@ export class DetalleServicioComponent implements OnInit {
             chofer: data.chofer,
             ubicacion: data.ubicacion
           })
+          this.direccion = this.crearUrlMap(data.ubicacion);
+          //console.log(this.direccion)
+        
         }, error: err => {
           console.log(err);
         }
       })
     }
+  }
+
+  crearUrlMap(dir: string) {
+    let direccion = dir.replace(/\s+/g, '\+');
+    console.log(direccion);
+    return `https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s${direccion}!6i13`;
   }
 }
 
