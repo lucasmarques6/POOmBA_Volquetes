@@ -54,9 +54,9 @@ export class DetalleServicioComponent implements OnInit {
             chofer: data.chofer,
             ubicacion: data.ubicacion
           })
-          this.direccion = "https://maps.google.com/maps?q="+ this.splitText(data.ubicacion) +"+caba&t=&z=13&ie=UTF8&iwloc=&output=embed";
-          console.log(this.direccion)
-        this.splitText(this.direccion)
+          this.direccion = this.crearUrlMap(data.ubicacion);
+          //console.log(this.direccion)
+        
         }, error: err => {
           console.log(err);
         }
@@ -64,10 +64,10 @@ export class DetalleServicioComponent implements OnInit {
     }
   }
 
-  splitText(dir: string) {
-    let splitted = dir.replace(/\s+/g, '+');
-    console.log(splitted);
-    return splitted;
+  crearUrlMap(dir: string) {
+    let direccion = dir.replace(/\s+/g, '\+');
+    console.log(direccion);
+    return `https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s${direccion}!6i13`;
   }
 }
 

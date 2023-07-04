@@ -12,6 +12,8 @@ import { DetalleServicioComponent } from './components/detalle-servicio/detalle-
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditarServicioComponent } from './components/editar-servicio/editar-servicio.component';
+import { SafePipeModule } from 'safe-pipe';
+import { UrlSafe } from './utilities/UrlSafe';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,16 @@ import { EditarServicioComponent } from './components/editar-servicio/editar-ser
     ListadoDeVolquetesComponent,
     FooterComponent,
     DetalleServicioComponent,
-    EditarServicioComponent
+    EditarServicioComponent,
+    UrlSafe
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SafePipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

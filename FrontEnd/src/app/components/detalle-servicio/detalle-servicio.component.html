@@ -6,8 +6,8 @@
                 <fieldset>
                     <div class="form-group">
                         <label for="numeroVolquete" class="form-label">Número</label>
-                        <input formControlName="numero" type="text" value="" class="form-label input-poomba" id="numeroVolquete"
-                            readonly>
+                        <input formControlName="numero" type="text" value="" class="form-label input-poomba"
+                            id="numeroVolquete" readonly>
                     </div>
                     <div class="form-group">
                         <label for="cliente" class="form-label">Cliente</label>
@@ -31,17 +31,13 @@
                     </div>
                     <div class="form-group">
                         <label for="ubicacionVolquete" class="form-label">Dirección</label>
-                        <input formControlName="ubicacion" type="text" value="" class="form-label input-poomba" readonly>
+                        <input formControlName="ubicacion" type="text" value="" class="form-label input-poomba"
+                            readonly>
                     </div>
                 </fieldset>
             </form>
-            <div class="mapouter">
-                <div class="gmap_canvas"><iframe width="820" height="560" id="gmap_canvas"
-                        [src]="direccion"
-                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                        href="https://timenowin.net/">online clock</a><br>
-                </div>
-            </div>
+            <iframe [src]="direccion | safe" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="btnForms">
             <button routerLink="/" type="button" class="btn btn-primary">Volver</button>
